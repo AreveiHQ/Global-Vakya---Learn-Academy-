@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components';
 import { slideInRightVariants, textVariants } from '../ProviderFunctions';
 import { motion } from 'framer-motion';
+import ApplyForm from './applyForm';
 export default function LanguagePage({language,height}) {
 
   const DynamicHeightDiv = styled.div`
@@ -36,32 +37,13 @@ export default function LanguagePage({language,height}) {
         <DynamicHeightDiv height={height}>
 
 
-        <motion.form
-        className="bg-white text-black mx-auto md:ml-auto p-8 rounded-lg shadow-lg sticky top-36 "
+        <motion.div
+        className=" text-black mx-auto md:ml-auto  sticky top-36 "
       initial="hidden"
       animate="visible"
       variants={slideInRightVariants}>
-          <div className="mb-4">
-            <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="name" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]" />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email ID</label>
-            <input type="email" id="email" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]" />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="language" className="block text-sm font-medium text-gray-700">Language</label>
-            <input type='text' id="language" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)] capitalize" value={language}>
-            </input>
-          </div>
-          <div className="mb-4">
-            <label htmlFor="contact" className="block text-sm font-medium text-gray-700">Contact Number</label>
-            <input type="text" id="contact" className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]" />
-          </div>
-          <div className='w-full flex justify-center items-center'>
-          <button type="submit" className=" my-5 w-max bg-[rgb(234,179,8)] text-white px-3 py-2 rounded-md hover:bg-blue-600">Submit</button>
-          </div>
-        </motion.form>
+          <ApplyForm language={language}/>
+        </motion.div>
 
       </DynamicHeightDiv>
     </div>
