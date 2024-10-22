@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 3 3">
+        <!-- Blue section -->
+        <rect width="1" height="3" fill="#0055A4"/>
+        <!-- White section -->
+        <rect x="1" width="1" height="3" fill="#FFFFFF"/>
+        <!-- Red section -->
+        <rect x="2" width="1" height="3" fill="#EF4135"/>
+      </svg>
+      
