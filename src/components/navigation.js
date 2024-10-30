@@ -39,16 +39,7 @@ export default function Navbar({isScrolled=true,openModal}) {
         <div className='flex'>
       
         <div className="flex  " onClick={()=>navigate('/')}>
-        <div className="flex items-center space-x-2">
-      {/* Globe Icon */}
-      <FaGlobeAmericas className="text-yellow-500 w-8 h-8" />
-
-      {/* Logo Text */}
-      <h1 className="text-2xl font-bold tracking-wide font-Oswald">
-        <span className="text-yellow-500">Global</span> 
-        <span className="text-gray-200">Vakya</span>
-      </h1>
-    </div>
+        <img src="/img/logo.png" className='h-20' alt="" />
         </div>
         
         </div>
