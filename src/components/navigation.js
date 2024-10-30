@@ -16,6 +16,7 @@ export default function Navbar({isScrolled=true,openModal}) {
   const [dropDWN,setdropDWN] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
+  const genericHamburgerLine = `h-1 w-8 my-1 rounded-full bg-white transition ease transform duration-300`;
   function handleopenDropdown(e){
     setdropDWN(e.currentTarget);
   }
@@ -52,22 +53,33 @@ export default function Navbar({isScrolled=true,openModal}) {
         </div>
         
         </div>
-        <div className="block md:hidden" onClick={toggleSideBar}>
-        <MdMenuOpen
-          style={{
-            backgroundColor:'rgba(29,13,207,1)',
-            color: "white",
-            fontSize: "40px",
-            padding: "4px",
-            borderRadius: "5px",
-          }}
+        <div className="block md:hidden">
+        <button
+        className="flex flex-col h-12 w-12 border-2 border-whitw rounded justify-center items-center group "
+        onClick={toggleSideBar}
+    >
+        <div
+            className={`${genericHamburgerLine} ${
+                isOpen
+                    ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
+                    : "opacity-50 group-hover:opacity-100"
+            }`}
         />
-      </div>
+        <div className={`${genericHamburgerLine} ${isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"}`} />
+        <div
+            className={`${genericHamburgerLine} ${
+                isOpen
+                    ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
+                    : "opacity-50 group-hover:opacity-100"
+            }`}
+        />
+    </button>
+    </div>
         </div>
 
       
         <div className={`transition-all h-min my-auto  ${isOpen?'block scale-y-100':'hidden scale-y-0'} md:block md:scale-y-100`}>
-      <div className='flex flex-col md:flex-row   gap-x-10  gap-y-8 md:gap-y-4 justify-around flex-wrap-reverse py-10 md:p-0  items-center my-auto ml-5'>
+      <div className='flex flex-col md:flex-row   gap-x-10  gap-y-8 md:gap-y-4 justify-around flex-wrap-reverse py-10 md:p-0  items-center my-auto '>
       <div className="  my-auto text-sm">
       <ul className="flex flex-col md:flex-row   gap-7 text-white  font-semibold items-center">
           <li className={`capitalize h-min cursor-pointer hover:text-yellow-200 ${location.pathname === '/'?'text-yellow-600':''}`} onClick={()=>{navigate('/');closeSideBar();}} >Home</li>
