@@ -1,5 +1,4 @@
 import React, {  useState } from 'react'
-import { MdMenuOpen } from 'react-icons/md';
 import JoinConsultation from './homesections/JoinConsultation';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Menu from '@mui/joy/Menu';
