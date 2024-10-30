@@ -55,7 +55,7 @@ export default function Navbar({isScrolled=true,openModal}) {
         </div>
         <div className="block md:hidden">
         <button
-        className="flex flex-col h-12 w-12 border-2 border-whitw rounded justify-center items-center group "
+        className="flex flex-col h-12 w-12  rounded justify-center items-center group "
         onClick={toggleSideBar}
     >
         <div
