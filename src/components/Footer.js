@@ -9,17 +9,8 @@ export default function Footer() {
     <footer className=' bg-black py-8  text-gray-500 font-Roboto '>
       <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row gap-y-8">
       <div className=" w-min md:w-[60%] space-y-9 mx-auto">
-      <div className="flex  " onClick={()=>navigate('/')}>
-        <div className="flex items-center space-x-2">
-      {/* Globe Icon */}
-      <FaGlobeAmericas className="text-yellow-500 w-8 h-8" />
-
-      {/* Logo Text */}
-      <h1 className="text-2xl font-bold tracking-wide font-Oswald">
-        <span className="text-yellow-500">Global</span> 
-        <span className="text-gray-200">Vakya</span>
-      </h1>
-    </div>
+      <div  onClick={()=>navigate('/')}>
+              <img src="/img/logo.png" className="h-28 " alt="" />
         </div>
         <ul className=' list-none flex gap-4 mx-auto'>
           <li><span className=' text-lg text-slate-400 whitespace-nowrap my-auto'>Follow Us On </span></li>

@@ -138,7 +138,7 @@ const ContactForm = () => {
             ></textarea>
             <p className="text-red-500 text-xs italic">{errors.message?.message}</p>
           </div>
-          <div className="flex gap-3">
+          <div className="flex flex-col sm:flex-row gap-3">
           <div>
           <ReCAPTCHA
         sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY}
@@ -178,12 +178,12 @@ const ContactForm = () => {
           </div>
         </motion.form>
         <motion.div
-          className="scroll-animated flex justify-center items-center rounded-full w-full lg:w-[40%] pr-6 lg:px-6"
+          className="scroll-animated flex justify-center items-center rounded-full w-full lg:w-[40%]  lg:px-6"
           initial="hidden"
           animate={controls}
           variants={slideInRightVariants}
         >
-          <img src="/img/GlobalVakya.png" className="w-1/2 lg:w-full" alt="" />
+          <img src="/img/logo.png" className="w-1/2 lg:w-full" alt="" />
         </motion.div>
       </div>
     </div>

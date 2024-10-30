@@ -83,12 +83,19 @@ export default function ApplyForm({ language = '' }) {
 
         <div className="mb-4">
           <label htmlFor="language" className="block text-sm font-medium text-gray-700">Language</label>
-          <input
+          {language?<input
             type="text"
             id="language"
             className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)] capitalize"
             {...register('language')}
-          />
+          />:<select
+          id="email"
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]"
+          {...register('language')}
+        >
+          <option value="">Select a Language</option>
+         {["Dutch","Spanish","English","Japanese","Chinese","French"].map((val)=><option value={val}>{val}</option>)}
+          </select>}
           {errors.language && <p className="text-red-500 text-sm mt-1">{errors.language.message}</p>}
         </div>
 

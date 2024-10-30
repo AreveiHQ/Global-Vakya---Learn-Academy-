@@ -7,13 +7,13 @@ const CourseInfo = ({language,elementRef}) => {
   return (
     <div className=" w-[92%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto font-Roboto">
       <div className="bg-white max-w-xl  mx-auto md:mx-0 w-full md:w-[40%]  rounded-lg  space-y-6" ref={elementRef}>
-        <h1 className="text-3xl font-semibold text-gray-900 text-center md:text-left  font-RobotoSlab">Unlock the Door to <span className=' capitalize'>{language}</span> Culture and Opportunities</h1>
+        <h1 className="text-3xl font-semibold text-gray-900 text-center md:text-left  font-RobotoSlab">Unlock the Door to <span className=' capitalize'>{language.name}</span> Culture and Opportunities</h1>
         <div className='space-y-6 '>
-          <h2 className=" text-gray-800">Why Learn <span className=' capitalize'>{language}</span>?</h2>
+          <h2 className=" text-gray-800">Why Learn <span className=' capitalize'>{language.name}</span>?</h2>
           <ul className="list-disc pl-7 space-y-4">
-            <li>Cultural Enrichment: Dive into the rich history and traditions of the Netherlands.</li>
-            <li>Career Advancement: Increase your job prospects in  <span className=' capitalize'>{language}</span>-speaking countries.</li>
-            <li>Travel with Confidence: Enjoy your travels to  <span className=' capitalize'>{language}</span>-speaking regions with ease.</li>
+            <li>Cultural Enrichment: Dive into the rich history and traditions of the {language.place}</li>
+            <li>Career Advancement: Increase your job prospects in  <span className=' capitalize'>{language.name}</span>-speaking countries.</li>
+            <li>Travel with Confidence: Enjoy your travels to  <span className=' capitalize'>{language.name}</span>-speaking regions with ease.</li>
           </ul>
         </div>
         <motion.div
@@ -75,7 +75,7 @@ const CourseInfo = ({language,elementRef}) => {
         </motion.div>
       </div>
         <h1 className="text-3xl font-semibold font-RobotoSlab text-gray-900 mx-auto text-center my-7 w-[70%] lg:w-[50%] ">
-        Start today and experience the benefits of speaking <span className=' capitalize'>{language}!</span> </h1>
+        Start today and experience the benefits of speaking <span className=' capitalize'>{language.name}!</span> </h1>
     </div>
   );
 }

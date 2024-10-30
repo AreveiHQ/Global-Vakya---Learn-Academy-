@@ -17,7 +17,7 @@ function LanguageDetails({lang,openModal}) {
   return (
     <>
     <Navbar openModal={openModal}/>
-    <LanguagePage language={lang} height={height}/>
+    <LanguagePage language={lang.name} height={height}/>
     <div className=' bg-white relative -top-16  rounded-[4rem]  text-black pt-14  space-y-20 '>
       <CourseInfo language={lang} elementRef={elementRef}/>
     </div>

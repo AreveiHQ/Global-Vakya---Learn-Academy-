@@ -28,6 +28,32 @@ const customStyles = {
 };
 function App() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const languages=[
+    {
+      name:'dutch',
+      place:"Netherlands",    
+    },
+    {
+      name:'spanish',
+      place:"Spain",
+    },
+    {
+      name:'english',
+      place:"England",
+    },
+    {
+      name:'japanese',
+      place:"Japan",
+    },
+    {
+      name:'chinese',
+      place:"China",
+    },
+    {
+      name:'french',
+      place:"France",
+    },
+  ]
 
   function openModal() {
     setIsOpen(true);
@@ -53,12 +79,16 @@ function App() {
       <ScrollToTop/>
       <Routes>
         <Route exact path='/' element={<HomePage openModal={openModal}/>}/>
-        <Route path='/learn/dutch' element={<LanguageDetails lang='dutch' openModal={openModal}/>}/>
+        {
+          languages.map((lang)=>{return <Route key={lang.name} path={`/learn/${lang.name}`} element={<LanguageDetails lang={lang} openModal={openModal}/>}/>}
+          )
+        }
+        {/* <Route path='/learn/dutch' element={<LanguageDetails lang='dutch' openModal={openModal}/>}/>
         <Route path='/learn/spanish' element={<LanguageDetails lang='spanish' openModal={openModal}/>}/>
         <Route path='/learn/english' element={<LanguageDetails lang='english' openModal={openModal}/>}/>
         <Route path='/learn/japanese' element={<LanguageDetails lang='japanese' openModal={openModal}/>}/>
         <Route path='/learn/chinese' element={<LanguageDetails lang='chinese' openModal={openModal}/>}/>
-        <Route path='/learn/french' element={<LanguageDetails lang='french' openModal={openModal}/>}/>
+        <Route path='/learn/french' element={<LanguageDetails lang='french' openModal={openModal}/>}/> */}
         <Route path='/ourPolicy' element={<PolicyPage/>}/>
         <Route path='/about' element={<AboutUs openModal={openModal}/>}/>
       </Routes>

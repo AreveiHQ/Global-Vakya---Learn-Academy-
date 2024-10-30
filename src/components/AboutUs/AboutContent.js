@@ -4,47 +4,45 @@ const AboutUsContent = () => {
   return (
     <section className="w-full md:w-[80%] lg:w-[70%] mx-auto px-6 sm:px-10 font-Roboto  text-[clamp(1.1rem,1.4vw,1.6rem)]">
         <div className="mb-8">
-        <p className=' mb-4'>Welcome to L-Earn Academy, where language learning meets excellence and innovation. At L-Earn Academy, we believe that mastering a new language is more than just acquiring vocabulary and grammar—it's about embracing new cultures, building global connections, and unlocking a world of opportunities. Our mission is to provide high-quality language education that empowers students to communicate confidently and effectively in today’s globalized world.</p>
+        <p className=' mb-4'>At L-Earn Academy, we understand that even if you have a huge vocabulary and know the rules very well, it is useless if you do not understand what lies beneath that empty surface. It is about appreciating various cultures, meeting people across the globe, and breaking all sorts of barriers. Our goal is to provide high-quality language training so that students will be able to use the language fluently and without fear in the present global reality.</p>
         </div>
         <div className="mb-8">
         <h3 className='  text-clamp-h2 font-semibold font-RobotoSlab mb-4 '>Our Philosophy</h3>
-        <p className='mb-4'>At L-Earn Academy, we prioritize a student-centered approach that is both adaptable and engaging. We offer a wide range of language courses tailored to different proficiency levels and learning preferences. Whether you’re a beginner eager to start your language journey, a professional looking to enhance your career prospects, or an advanced learner aiming to perfect your skills, we have the right program for you. Our courses are designed to be interactive, immersive, and culturally enriching, ensuring that students gain practical language skills that extend beyond the classroom.</p>
+        <p className='mb-4'>We value a flexible and dynamic student-centered model. We have a wide spectrum of language courses based on different levels and different ways of learning. Starting from a person who knows nothing about the language and wants to learn it for basic purposes, a businessperson who will advance their career by learning the language, or an expert in the language who wants to do a course with us, we have just the right program for you. Our courses will always be interactive, engaging, enjoyable, and rich in culture so that learners gain language skills that are functional even outside the classroom setting.</p>
         </div>
 
 
       <section className="mb-8">
         <h2 className=" text-clamp-h2 font-semibold font-RobotoSlab  mb-4">Our Courses</h2>
         <ul className="list-disc list-inside space-y-2">
-          <li><strong>General Language Courses:</strong> Learn languages such as English, Spanish, French, German, Mandarin, and more.</li>
-          <li><strong>Business Language Programs:</strong> Specialized courses to help professionals enhance their language skills for the global marketplace.</li>
-          <li><strong>Exam Preparation:</strong> Intensive training for language proficiency exams like TOEFL, IELTS, DELE, and HSK.</li>
-          <li><strong>Kids and Teens Programs:</strong> Fun and engaging courses tailored for younger learners to develop their language abilities early on.</li>
-          <li><strong>Conversation Clubs and Cultural Workshops:</strong> Gain cultural insights and practice your language skills in real-world settings.</li>
+          <li><strong>Language Courses:</strong> Acquire skills in languages like English, Spanish, French, German, and Mandarin among others. </li>
+          <li><strong>Business Language Training Programs: </strong>These are specialized courses designed to develop language for the global business environment. </li>
+          <li><strong>Test Preparation: </strong> Courses devoted to severe language abuse for examinations such as the TOEFL, IELTS, DELE, HSK, and the like. </li>
+          <li><strong>Kids and Teens Programs:</strong> These provide entertaining and effective courses to give younger learners a head start in their language acquisition. </li>
+          <li><strong>Conversation Clubs and Cultural Workshops:</strong> Get a sense of the culture and how things are done while practicing the language more practically.</li>
         </ul>
       </section>
 
       <section className="mb-8">
         <h2 className=" text-clamp-h2 font-semibold font-RobotoSlab  mb-4">Our Founder</h2>
         <p className="mb-4">
-          L-Earn Academy was founded by an experienced language educator with a passion for teaching and a deep understanding of effective language instruction. With a decade of experience in language teaching, our founder brings a wealth of knowledge and expertise to the academy. Holding advanced degrees in Spanish and certification in Dutch, our founder has taught students at various levels, from beginners to advanced learners.
+        The formation of L-Earn Academy is thanks to a passionate language teacher who not only comprehends how to teach languages effectively but also possesses a burning desire to teach. L-Earn Academy's founder boasts ten years of experience in the teaching profession. One such notable experience covers some of the university lecturing positions she held in different countries, where she taught college students and worked with teaching allies in other countries to improve her skills. Also, she is a holder of a master’s degree in Spanish and a degree in Dutch, and up to this moment, she has managed to help many students, including those during corporate language training and others, just for fun in pursuing these languages.
         </p>
-        <p className="mb-4">
-          Their teaching journey includes a notable role as a visiting Assistant Professor at Delhi University, where they imparted knowledge to university students, and a year spent in Spain as an 'Auxiliares de Conversación,' where they further honed their teaching skills. Their approach to language instruction is highly adaptable and student-focused, ensuring that each learner’s unique needs and goals are met. Over the years, our founder has helped countless students achieve fluency and confidence in Spanish and Dutch, whether for corporate training or personal development.
-        </p>
+
       </section>
 
       <section className="mb-8">
-        <h2 className=" text-clamp-h2 font-semibold font-RobotoSlab  mb-4">Why Choose L-Earn Academy?</h2>
+        <h2 className=" text-clamp-h2 font-semibold font-RobotoSlab  mb-4">Why Opt For L-Earn Academy? </h2>
         <ul className="list-disc list-inside space-y-2">
-          <li><strong>Personalized Learning:</strong> We understand that every learner is unique. Our courses are tailored to fit individual learning styles and goals.</li>
-          <li><strong>Experienced Educators:</strong> Our team of passionate and skilled instructors brings years of experience and a deep commitment to student success.</li>
-          <li><strong>Cultural Immersion:</strong> We believe that language learning is most effective when it includes cultural understanding. Our courses integrate cultural insights to enhance your learning experience.</li>
-          <li><strong>Community Focus:</strong> We foster a supportive and inclusive learning environment where students can thrive and connect with others who share their passion for languages.</li>
+          <li><strong>Customized Learning:</strong> We understand that every learner is different. That is why our courses are designed to meet their different learning patterns and aims.</li>
+          <li><strong>Adept Trainers:</strong> Our team of devoted teachers has experience in teaching and a desire for students' success. </li>
+          <li><strong>Language Professional:</strong>Culture is inseparable from any language. In our courses, culture is an integral part of the learning process. </li>
+          <li><strong>Community-Oriented::</strong> We foster and provide an environment conducive to all the language students, enabling them to interact freely with people with the same interests and help one another.</li>
         </ul>
       </section>
 
       <p className="text-lg">
-        Join us at L-Earn Academy and embark on a language learning journey that will transform your communication skills, broaden your horizons, and open doors to new opportunities.
+      Enroll at L-Earn Academy today and get ready to learn a language that will change your life, lift your communication skills to the next level, and open up many more opportunities and horizons for you.
       </p>
     </section>
   );
