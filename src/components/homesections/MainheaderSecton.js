@@ -10,7 +10,7 @@ export default function MainSection({openModal}) {
       initial="hidden"
       animate="visible"
       variants={textVariants}
-      className="  font-bold  font-Inter  text-black  text-center sm:text-left"
+      className="  font-bold  font-RobotoSlab  text-black  text-center sm:text-left"
     >
         
         <div className=' relative text-4xl sm:text-[clamp(3rem,6vw,7rem)] sm:leading-[3rem] md:leading-[4rem]  lg:leading-[5rem] xl:leading-[6rem] flex flex-col z-0 '>
@@ -20,20 +20,20 @@ export default function MainSection({openModal}) {
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 0.3 }}
-      ><span className=' whitespace-normal sm:whitespace-nowrap '>Global Language,</span></motion.h1>
+      ><span className=' whitespace-normal sm:whitespace-nowrap font-Lobster'>Global Language,</span></motion.h1>
        <motion.h1
         style={{ display: "inline-block", margin: "0 5px" }}
         initial={{ scale: 0.8 }}
         animate={{ scale: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
-      ><span>Local Expertise</span></motion.h1>
+      ><span className='font-Lobster'>Local Expertise</span></motion.h1>
         <motion.div
          style={{ display: "inline-block", margin: "0 5px" }}
          initial={{ scale: 0.8 }}
          animate={{ scale: 1 }}
          transition={{ duration: 0.5, delay: 0.7 }}
          className="text-base text-gray-700 pt-5 pb-10 sm:pb-14 md:pb-20"
-      ><span className=' text-xl '>New Language Batch Starting Every Month!!</span></motion.div>
+      ><span className=' text-xl '>🎉 New Language Batch Starting Soon! Limited Seats Available 🌍📚</span></motion.div>
         </div>
         <motion.div
          style={{ display: "inline-block", margin: "0 5px" }}
@@ -45,7 +45,7 @@ export default function MainSection({openModal}) {
         <button className="px-6 py-3 bg-[rgb(29,13,207)] text-white rounded-md text-lg font-semibold hover:bg-blue-700 active:translate-x-0.5 active:translate-y-0.5" onClick={openModal}>
           Enroll Now
         </button>
-        <p className="mt-2 text-red-600 font-semibold">Limited Seats Available!!</p>
+        {/* <p className="mt-2 text-red-600 font-semibold">Limited Seats Available!!</p> */}
       </motion.div>
         </motion.div>
       <motion.div
