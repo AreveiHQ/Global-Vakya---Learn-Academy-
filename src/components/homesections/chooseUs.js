@@ -49,7 +49,7 @@ const WhyChooseUs = ({openModal}) => {
         </div>
       </div>
       <div className="flex justify-center mt-12">
-        <button className="bg-white text-blue-900 font-bold py-2.5 px-5 text-sm font-RobotoSlab rounded-full" onClick={openModal}>Apply Now</button>
+        <button className="bg-white text-blue-900 font-bold py-2.5 px-5 text-sm font-RobotoSlab rounded-full active:translate-x-0.5 active:translate-y-0.5" onClick={openModal}>Apply Now</button>
       </div>
     </div>
     </div>

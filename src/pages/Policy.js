@@ -17,7 +17,7 @@ const PolicyPage = () => {
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">1. Privacy Policy</h2>
-        <p className="mb-4">L-Earn Academy is committed to protecting your privacy. This policy outlines how we collect, use, and protect your personal information.</p>
+        <p className="mb-4">Global Vakya is committed to protecting your privacy. This policy outlines how we collect, use, and protect your personal information.</p>
         <ul className="list-disc list-inside space-y-2">
           <li><strong>Information Collection:</strong> We may collect personal information such as your name, email address, phone number, and payment details when you register for courses, subscribe to newsletters, or make inquiries.</li>
           <li><strong>Use of Information:</strong> Your information is used to provide and improve our services, process payments, communicate with you, and personalize your experience on our website.</li>
@@ -29,7 +29,7 @@ const PolicyPage = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">2. Terms of Use</h2>
         <ul className="list-disc list-inside space-y-2">
-          <li><strong>Content Ownership:</strong> All content on this website, including text, images, logos, and course materials, is the intellectual property of L-Earn Academy unless otherwise stated. Unauthorized use of any content is prohibited.</li>
+          <li><strong>Content Ownership:</strong> All content on this website, including text, images, logos, and course materials, is the intellectual property of Global Vakya unless otherwise stated. Unauthorized use of any content is prohibited.</li>
           <li><strong>User Conduct:</strong> You agree to use the website for lawful purposes only. You must not post or transmit any harmful, offensive, or illegal content.</li>
           <li><strong>Course Enrollment:</strong> By enrolling in our courses, you agree to abide by the specific terms and conditions related to course fees, cancellations, and refunds as outlined during the registration process.</li>
           <li><strong>Account Security:</strong> You are responsible for maintaining the confidentiality of your account information and for any activities that occur under your account.</li>
@@ -49,14 +49,14 @@ const PolicyPage = () => {
         <h2 className="text-2xl font-semibold mb-2">4. Disclaimers</h2>
         <ul className="list-disc list-inside space-y-2">
           <li><strong>No Warranties:</strong> While we strive to keep the information on our website accurate and up-to-date, we make no warranties or representations about the completeness, accuracy, or reliability of the content.</li>
-          <li><strong>Limitation of Liability:</strong> L-Earn Academy shall not be liable for any direct, indirect, incidental, or consequential damages arising out of your use of our website or the inability to access it.</li>
+          <li><strong>Limitation of Liability:</strong> Global Vakya shall not be liable for any direct, indirect, incidental, or consequential damages arising out of your use of our website or the inability to access it.</li>
           <li><strong>Third-Party Links:</strong> Our website may contain links to third-party websites for your convenience. We do not endorse or assume responsibility for the content or practices of these external sites.</li>
         </ul>
       </section>
 
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">5. Changes to This Policy</h2>
-        <p>L-Earn Academy reserves the right to modify this Website Policy at any time. Changes will be effective immediately upon posting on our website. We encourage you to review this policy regularly to stay informed of any updates.</p>
+        <p>Global Vakya reserves the right to modify this Website Policy at any time. Changes will be effective immediately upon posting on our website. We encourage you to review this policy regularly to stay informed of any updates.</p>
       </section>
     </div>
   );

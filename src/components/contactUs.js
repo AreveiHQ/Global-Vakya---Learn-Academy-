@@ -120,7 +120,7 @@ const ContactForm = () => {
               className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
-              placeholder="email@janesfakedomain.net"
+              placeholder="xyz@gmail.com"
               {...register('email')}
             />
             <p className="text-red-500 text-xs italic mt-1">{errors.email?.message}</p>

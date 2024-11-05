@@ -19,7 +19,7 @@ export default function Footer() {
       </div>
       <div className=" w-max md:w-[40%] flex flex-col gap-y-7 text-center mx-auto  md:flex-row justify-end py-5">
       <ul className=' list-none flex flex-col gap-4'>
-                <li  className=' font-bold text-slate-400 text-lg'>L-Earn Academy Links</li>
+                <li  className=' font-bold text-slate-400 text-lg'>Global Vakya Links</li>
                 <li className=' cursor-pointer hover:text-yellow-500'><Link to="/">Home</Link></li>
                 <li className=' cursor-pointer hover:text-yellow-500'><Link to="/about">About us page</Link></li>
                 <li className=' cursor-pointer hover:text-yellow-500'><Link to="/ourPolicy">Privacy Policy </Link></li>
@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
       </div>
       <div className=" text-center text-sm">
-        <p>All Rights Reserved Ⓡ L-Earn Academy.</p>
+        <p>All Rights Reserved Ⓡ Global Vakya.</p>
         <p>Maintained and Developed by <a className=' hover:underline hover:text-slate-200' href="https://www.arevei.com">www.arevei.com</a></p>
         </div>
     </footer>

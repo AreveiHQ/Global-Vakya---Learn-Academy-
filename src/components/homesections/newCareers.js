@@ -46,18 +46,7 @@ export default function NewCareers() {
         <h3 className=' text-[clamp(1.6rem,2.3vw,2.5rem)] font-semibold font-RobotoSlab'>New Language, New Career</h3>
         <p className='text-xl'>Choose The Right Foreign Language</p>
         <div className="w-full  overflow-x-scroll ">
-        {/* <div className="flex gap-5  mx-auto w-min">
-                <div className=" w-[clamp(13rem,14vw,15rem)] h-[clamp(13rem,14vw,15rem)] bg-cover overflow-hidden rounded-md  ">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqdiY57vdT8nZgKITRkhP5uMnq-fNle33aA&s" alt="" />                
-                </div>
-                <div className=" w-[clamp(13rem,14vw,15rem)] h-[clamp(13rem,14vw,15rem)] bg-cover overflow-hidden rounded-md"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" alt="" /></div>
-                <div className=" w-[clamp(13rem,14vw,15rem)] h-[clamp(13rem,14vw,15rem)] bg-cover overflow-hidden rounded-md"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rN09OShlEvLy26EJ9cuRDSNrLUKUH3RT1Q&s" alt="" /></div>
-                <div className=" w-[clamp(13rem,14vw,15rem)] h-[clamp(13rem,14vw,15rem)] bg-cover overflow-hidden rounded-md  ">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMqdiY57vdT8nZgKITRkhP5uMnq-fNle33aA&s" alt="" />                
-                </div>
-                <div className=" w-[clamp(13rem,14vw,15rem)] h-[clamp(13rem,14vw,15rem)] bg-cover overflow-hidden rounded-md"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0zS2xtkqCWnBYJwt0VgD5aVrrw7jkATAZAQ&s" alt="" /></div>
-                <div className=" w-[clamp(13rem,14vw,15rem)] h-[clamp(13rem,14vw,15rem)] bg-cover overflow-hidden rounded-md"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rN09OShlEvLy26EJ9cuRDSNrLUKUH3RT1Q&s" alt="" /></div>
-        </div> */}
+  
 
 <div className=" flex justify-center items-center text-left">
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-4xl mx-auto">

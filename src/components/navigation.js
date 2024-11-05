@@ -38,7 +38,7 @@ export default function Navbar({isScrolled=true,openModal}) {
         <div className='flex'>
       
         <div className="flex  " onClick={()=>navigate('/')}>
-        <img src="/GlobalVakyaWhite.png" className='h-16' alt="white logo" />
+        <img src="/Global-Vakya-header.png" className=' h-12 sm:h-16' alt="white logo" />
         </div>
         
         </div>
@@ -92,7 +92,7 @@ export default function Navbar({isScrolled=true,openModal}) {
         </ul>
       </div>
        <div className=' my-0 md:my-auto mx-auto md:mx-0 w-max ml-auto text-right'> 
-       <button className=' py-2.5 px-5  rounded-full bg-yellow-500 font-semibold h-min font-RobotoSlab text-sm' onClick={openModal}>Apply Now</button>
+       <button className=' py-2.5 px-5  rounded-full bg-yellow-500 font-semibold h-min font-RobotoSlab text-sm active:translate-x-0.5 active:translate-y-0.5' onClick={openModal}>Apply Now</button>
         </div>
         </div>
         </div>

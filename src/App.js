@@ -93,7 +93,7 @@ function App() {
         <Route path='/about' element={<AboutUs openModal={openModal}/>}/>
       </Routes>
     </Router>
-    <a href={`https://wa.me/34677902803?text=${encodeURIComponent("Hello Learn Academy Team, I'd like to chat with you")}`} className="p-2 fixed z-30 bottom-6 right-6 border-2 rounded-full border-green-500 bg-white "><IoLogoWhatsapp className='text-green-500' style={{fontSize:'2rem'}}/></a>
+    <a href={`https://wa.me/917398331119?text=${encodeURIComponent("Hello Learn Academy Team, I'd like to chat with you")}`} className="p-2 fixed z-30 bottom-6 right-6 border-2 rounded-full border-green-500 bg-white "><IoLogoWhatsapp className='text-green-500' style={{fontSize:'2rem'}}/></a>
     </div>
   );
 }

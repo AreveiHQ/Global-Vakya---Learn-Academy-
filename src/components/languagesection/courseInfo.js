@@ -27,14 +27,14 @@ const CourseInfo = ({language,elementRef}) => {
           <motion.div className="mt-4  bg-[#EBEBEB]"   variants={textVariants}>
             <h3 className="text-xl font-semibold bg-[#1D0DCF] text-white px-4 lg:px-6 py-3">A1 (Beginner)</h3>
             <div className="p-4 lg:p-6  space-y-7">
-            <p>Duration: 80-150 hours</p>
+            <p>Duration: 40-50 hours</p>
             <p>Objectives: Basic phrases, introductions, everyday expressions, simple sentences, basic grammar</p>
             </div>
           </motion.div>
           <motion.div className="mt-4  bg-[#EBEBEB]"   variants={textVariants}>
         <h3 className="text-xl font-semibold bg-[#1D0DCF] text-white px-4 lg:px-6 py-3">A2 (Elementary)</h3>
         <div className="p-4 lg:p-6 space-y-7">
-            <p>Duration: 100-180 hours</p>
+            <p>Duration: 40-50 hours</p>
             <p>Objectives: Everyday routines, simple communication on familiar topics, more complex grammar</p>
         </div>
     </motion.div>
@@ -42,8 +42,9 @@ const CourseInfo = ({language,elementRef}) => {
     <motion.div className="mt-4  bg-[#EBEBEB]"   variants={textVariants}>
         <h3 className="text-xl font-semibold bg-[#FFC02E] text-black px-4 lg:px-6 py-3">B1 (Intermediate)</h3>
         <div className="p-4 lg:p-6 space-y-7">
-            <p>Duration: 100-180 hours</p>
-            <p>Objectives: Everyday routines, simple communication on familiar topics, more complex grammar</p>
+            <p>Duration: 150-250 hours</p>
+            <p>Objectives: Conversations on familiar topics, narratives, future plans, simple text comprehension
+            </p>
         </div>
     </motion.div>
 
