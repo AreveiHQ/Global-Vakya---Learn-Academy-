@@ -5,7 +5,7 @@ export default function Training() {
                 {image:'/img/Rectangle_18.png',examname:'IELTS (International English Language Testing System)'},
                 {image:'/img/Rectangle_16.png',examname:'TOEFL (Test of English as a Foreign Language)'},
                 {image:'/svg/Dutch.svg',examname:'NT2 (Dutch as a Second Language)'},
-                {image:'/img/Rectangle_13.png',examname:'DELE (Diplomas de Español como Lengua Extranjera)'},
+                {image:'/img/dele.jpeg',examname:'DELE (Diplomas de Español como Lengua Extranjera)'},
                 {image:'/img/Rectangle_15.png',examname:'Goethe-Zertifikat'},
                 {image:'/img/hindi.avif',examname:'ILTS (International Hindi Proficiency Test)'},
                 {image:'/img/Rectangle_21.png',examname:'TOPIK (Test of Proficiency in Korean)'},

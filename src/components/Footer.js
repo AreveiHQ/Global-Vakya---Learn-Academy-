@@ -10,7 +10,7 @@ export default function Footer() {
       <div className="w-[97%] sm:w-[94%] md:w-[88%] lg:w-[84%] xl:w-[80%] mx-auto flex flex-col md:flex-row gap-y-8">
       <div className=" w-min md:w-[60%] space-y-9 mx-auto">
       <div  onClick={()=>navigate('/')}>
-              <img src="/img/logo.png" className="h-28 " alt="" />
+              <img src="/GlobalVakyaWhite.png" className="h-28 " alt="" />
         </div>
         <ul className=' list-none flex gap-4 mx-auto'>
           <li><span className=' text-lg text-slate-400 whitespace-nowrap my-auto'>Follow Us On </span></li>
