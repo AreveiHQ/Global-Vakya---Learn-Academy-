@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useForm,Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 
 // Validation schema
 const validationSchema = yup.object().shape({
@@ -9,9 +11,9 @@ const validationSchema = yup.object().shape({
   email: yup.string().email('Please enter a valid email').required('Email is required'),
   language: yup.string().required('Language is required'),
   contact: yup
-    .string()
-    .matches(/^\d{10}$/, 'Contact number must be 10 digits')
-    .required('Contact number is required'),
+  .string()
+  .required("Phone number is required")
+  .matches(/^\+[1-9]\d{1,14}$/, "Phone number is invalid. Include country code."),
 });
 
 export default function ApplyForm({ language = '' }) {
@@ -19,7 +21,7 @@ export default function ApplyForm({ language = '' }) {
   const [isLoading, setLoading] = useState(false);
 
   // UseForm hook
-  const { register, handleSubmit, formState: { errors }, reset } = useForm({
+  const { register, handleSubmit,control, formState: { errors }, reset } = useForm({
     resolver: yupResolver(validationSchema),
     defaultValues: { language }, // Set default value for language prop
   });
@@ -29,7 +31,7 @@ export default function ApplyForm({ language = '' }) {
     setMessage('Loading....!');
     setLoading(true);
 
-    fetch('https://sheetdb.io/api/v1/ds0ic2zbnz5b0', {
+    fetch(process.env.REACT_APP_SHEETDB_URL, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -100,15 +102,27 @@ export default function ApplyForm({ language = '' }) {
         </div>
 
         <div className="mb-4">
-          <label htmlFor="contact" className="block text-sm font-medium text-gray-700">Contact Number</label>
-          <input
-            type="text"
-            id="contact"
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]"
-            {...register('contact')}
-          />
-          {errors.contact && <p className="text-red-500 text-sm mt-1">{errors.contact.message}</p>}
-        </div>
+        <label htmlFor="contact" className="block text-sm font-medium text-gray-700">
+          Contact Number
+        </label>
+        <Controller
+          name="contact"
+          control={control}
+          render={({ field }) => (
+            <PhoneInput
+              {...field}
+              international
+              defaultCountry="US"
+              placeholder="Enter phone number"
+              id="contact"
+              className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]"
+            />
+          )}
+        />
+        {errors.contact && (
+          <p className="text-red-500 text-sm mt-1">{errors.contact.message}</p>
+        )}
+      </div>
 
         <div className="w-full flex justify-center items-center">
           <button

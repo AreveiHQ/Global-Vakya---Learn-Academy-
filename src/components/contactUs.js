@@ -3,13 +3,18 @@ import emailjs from '@emailjs/browser';
 import { toast } from 'react-hot-toast';
 import { slideInLeftVariants, slideInRightVariants, useScrollAnimation } from './ProviderFunctions';
 import { motion } from 'framer-motion';
-import { useForm } from 'react-hook-form';
+import { useForm,Controller } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
+import PhoneInput from "react-phone-number-input";
+import "react-phone-number-input/style.css";
 // Validation schema
 const contactSchema = Yup.object().shape({
   firstName: Yup.string().required('First name is required'),
   lastName: Yup.string().required('Last name is required'),
+  contact: Yup.string().required("Phone number is required").test("is-valid-phone", "Phone number is not valid", (value) =>
+    value ? /^\+[1-9]\d{1,14}$/.test(value) : false
+  ),
   email: Yup.string().email('Invalid email format').required('Email is required'),
   message: Yup.string().min(10, 'Message should be at least 10 characters').required('Message is required'),
 });
@@ -24,6 +29,7 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
     reset,
   } = useForm({
@@ -36,7 +42,9 @@ const ContactForm = () => {
     const templateParams = {
       name: `${data.firstName} ${data.lastName}`,
       email: data.email,
+      contact:data.contact,
       message: data.message,
+      reply_to:data.email
     };
 
     emailjs
@@ -104,6 +112,32 @@ const ContactForm = () => {
               <p className="text-red-500 text-xs italic mt-1">{errors.lastName?.message}</p>
             </div>
           </div>
+          <div className="mb-4">
+        <label
+          className="block text-gray-700 text-sm font-bold mb-2"
+          htmlFor="phone"
+        >
+          Phone Number
+        </label>
+        <Controller
+          name="contact"
+          control={control}
+          render={({ field }) => (
+            <PhoneInput
+              {...field}
+              international
+              defaultCountry="US"
+              placeholder="Enter phone number"
+              className="shadow appearance-none border rounded w-full py-3 px-4 text-gray-700 leading-tight border-none outline-none"
+              limitMaxLength
+            />
+          )}
+        />
+        <p className="text-red-500 text-xs italic mt-1">
+          {errors.contact?.message}
+        </p>
+      </div>
+
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
               Email address

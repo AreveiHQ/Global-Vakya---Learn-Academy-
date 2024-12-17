@@ -56,6 +56,11 @@
 .floating{
   animation:floating 7s ease infinite ;
 }
+.PhoneInputInput{
+  outline: none;
+  border: none;
+  background: transparent;
+}
 @keyframes floating {
   0% {
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
