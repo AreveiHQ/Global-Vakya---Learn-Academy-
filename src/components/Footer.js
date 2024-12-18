@@ -14,7 +14,7 @@ export default function Footer() {
         </div>
         <ul className=' list-none flex gap-4 mx-auto'>
           <li><span className=' text-lg text-slate-400 whitespace-nowrap my-auto'>Follow Us On </span></li>
-                <li className="text-gray-400 hover:text-yellow-200 cursor-pointer "><a  href="https://www.instagram.com/learnacademy2024/"><FaInstagram fontSize={30}/></a></li>
+                <li className="text-gray-400 hover:text-yellow-200 cursor-pointer "><a  href="https://www.instagram.com/globalvakya/profilecard/?igsh=MWRhbm43OWNua3VlbQ%3D%3D"><FaInstagram fontSize={30}/></a></li>
         </ul>
       </div>
       <div className=" w-max md:w-[40%] flex flex-col gap-y-7 text-center mx-auto  md:flex-row justify-end py-5">

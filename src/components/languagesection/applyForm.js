@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import PhoneInput from "react-phone-number-input";
 import "react-phone-number-input/style.css";
-
+const moment = require("moment")
 // Validation schema
 const validationSchema = yup.object().shape({
   name: yup.string().required('Name is required'),
@@ -28,7 +28,6 @@ export default function ApplyForm({ language = '' }) {
 
   // Submit handler (similar to FormComponent)
   const onSubmit = async (data) => {
-    setMessage('Loading....!');
     setLoading(true);
 
     fetch(process.env.REACT_APP_SHEETDB_URL, {
@@ -39,7 +38,7 @@ export default function ApplyForm({ language = '' }) {
       },
       body: JSON.stringify({
         data: [
-          { Name: data.name, Email: data.email, Language: data.language, Contact: data.contact },
+          { Name: data.name, Email: data.email, Language: data.language, Contact: data.contact,SubmittedAt:moment().format("DD-MM-YYYY HH:mm:ss") },
         ],
       }),
     })
@@ -85,19 +84,15 @@ export default function ApplyForm({ language = '' }) {
 
         <div className="mb-4">
           <label htmlFor="language" className="block text-sm font-medium text-gray-700">Language</label>
-          {language?<input
-            type="text"
-            id="language"
-            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)] capitalize"
-            {...register('language')}
-          />:<select
+    <select
           id="email"
-          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]"
+          className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)] capitalize"
           {...register('language')}
+          defaultValue={language}
         >
           <option value="">Select a Language</option>
-         {["Dutch","Spanish","English","Japanese","Chinese","French"].map((val)=><option value={val}>{val}</option>)}
-          </select>}
+         {["dutch","spanish","english","japanese","chinese","french"].map((val)=><option className=' capitalize' value={val}>{val}</option>)}
+          </select>
           {errors.language && <p className="text-red-500 text-sm mt-1">{errors.language.message}</p>}
         </div>
 
@@ -115,6 +110,7 @@ export default function ApplyForm({ language = '' }) {
               defaultCountry="US"
               placeholder="Enter phone number"
               id="contact"
+              limitMaxLength
               className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 bg-[rgb(235,235,235)]"
             />
           )}
@@ -125,12 +121,19 @@ export default function ApplyForm({ language = '' }) {
       </div>
 
         <div className="w-full flex justify-center items-center">
+          {
+            isLoading ? <button type="button" className="bg-[rgb(234,179,8)] mt-5 mb-3 py-3 px-8  h-max w-max rounded-lg text-white font-bold  hover:cursor-not-allowed duration-[500ms,800ms]" disabled>
+            <div className="flex gap-1 items-center justify-center "> 
+          <div className=" border-t-transparent border-solid animate-spin p-2 rounded-full border-white border-4"></div>
+          Submitting...
+      </div>
+</button>:
           <button
             type="submit"
-            className="my-5 w-max bg-[rgb(234,179,8)] text-white px-3 py-2 rounded-md hover:bg-blue-600"
+            className="mt-5 mb-3 w-max bg-[rgb(234,179,8)] text-white px-8 py-3 rounded-md hover:bg-yellow-600"
           >
-            {isLoading ? 'Submitting...' : 'Submit'}
-          </button>
+             Submit
+          </button>}
         </div>
 
         {message && <p className="text-center mt-4">{message}</p>}

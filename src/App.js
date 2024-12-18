@@ -71,7 +71,7 @@ function App() {
         style={customStyles}
         contentLabel="Example Modal"
       >
-        <div className=" w-[20rem] sm:w-[22rem] md:w-[24rem] lg:w-[28rem] xl:w-[30rem]">
+        <div className=" w-[20rem] sm:w-[22rem] md:w-[24rem] lg:w-[28rem] xl:w-[30rem] font-Poppins">
         <ApplyForm/>
         </div>
       </Modal>
